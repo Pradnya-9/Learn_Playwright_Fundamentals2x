@@ -1,21 +1,21 @@
 # Learn Playwright Fundamentals 2x
 
-This repository contains a Playwright Test project with sample browser automation tests and organized test suites.
+This repository contains a Playwright Test learning project with practical browser automation examples, locator exercises, and task-based test cases.
 
-## Project contents
+## What’s included
 
-- `package.json` - project metadata and dev dependencies
-- `playwright.config.ts` - Playwright test configuration
-- `tests/` - main test directory with grouped spec files
-- `.gitignore` - excludes `node_modules/`, Playwright reports, and test result artifacts
-- `.gitkeep` - placeholder files for empty folders that need to stay tracked in Git
+- Playwright test setup and configuration in [playwright.config.ts](playwright.config.ts)
+- Sample tests organized by topic in [tests](tests)
+- Browser automation exercises for basics, first runs, locators, web tables, and task-based scenarios
+- Project metadata and dev dependencies in [package.json](package.json)
 
-## Test directories
+## Test structure
 
-- `tests/01_Basics` - basic Playwright test examples
-- `tests/02_First_tests` - first test runs and browser context examples
-- `tests/03_Locators_Commands` - locator usage and command examples
-- `tests/Tasks` - task-based practice tests
+- [tests/01_Basics](tests/01_Basics) - basic Playwright examples and annotations
+- [tests/02_First_tests](tests/02_First_tests) - first test executions and browser context scenarios
+- [tests/03_Locators_Commands](tests/03_Locators_Commands) - locator and command practice
+- [tests/07_WebTables](tests/07_WebTables) - dynamic XPath and web table handling examples
+- [tests/Tasks](tests/Tasks) - task-based practice tests
 
 ## Setup
 
@@ -24,18 +24,23 @@ This repository contains a Playwright Test project with sample browser automatio
    npm install
    ```
 
-2. Run the full test suite:
+2. Run the full suite:
    ```bash
    npm test
    ```
 
-3. Run a specific test file:
+3. Run a single spec file:
    ```bash
    npx playwright test tests/02_First_tests/237_BCP_Test_Options.spec.ts --headed
    ```
 
+4. Generate and open the HTML report:
+   ```bash
+   npx playwright show-report
+   ```
+
 ## Notes
 
-- The `node_modules/`, `test-results/`, and `playwright-report/` folders are ignored by `.gitignore`.
-- The repository includes `.gitkeep` files to preserve empty directories in Git when needed.
-- The Playwright configuration has been set to use `tests/` as the test directory and includes browser run settings.
+- The repository ignores generated folders such as node_modules, test-results, and playwright-report.
+- The Playwright configuration points tests to the [tests](tests) folder.
+- Use the Playwright test runner for both local execution and report generation.
